@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Design</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <div class="menu-btn">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+        <h1>Simple Web Design</h1>
+    </header>
+    <!--Menu Button-->
+    <!--<div class="menu-btn">
+        <ion-icon name="menu"></ion-icon>-->
+        <!--<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"/></svg>-->
+    <!--</div>-->
+    <div class="sidebar">
+        <div class = "sidebar-header">
+            <div class="close-btn">
+                <ion-icon name="close"></ion-icon>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"/></svg>-->
+            </div>
+            <h1>Side Menu Bar</h1>
+        </div>
+        <div class="menu">
+            <!--Option 1-->
+            <div class="item">
+                <a href="#">Option 1</a>
+            </div>
+
+            <!--Option 2-->
+            <div class="item">
+                <a href="#" class="sub-btn" data-container="toggle-1">
+                    Option 2
+                    <ion-icon name="chevron-forward" class="dropdown"></ion-icon>
+                </a>
+                <!--Sub menu 1-->
+                <div class="sub-menu" id="toggle-1">
+                    <a href="#" class="sub-item">Sub Item 1</a>
+                    <a href="#" class="sub-item">Sub Item 2</a>
+                    <a href="#" class="sub-item">Sub Item 3</a>
+                </div>
+            </div>
+
+            <!--Option 3-->
+            <div class="item">
+                <a href="#">Option 3</a>
+            </div>
+
+            <!--Option 4-->
+            <div class="item">
+                <a href="#" class="sub-btn" data-container="toggle-2">
+                    Option 4
+                    <ion-icon name="chevron-forward" class="dropdown"></ion-icon>
+                </a>
+                <!--Sub menu 2-->
+                <div class="sub-menu" id="toggle-2">
+                    <a href="#" class="sub-item">Sub Item 1</a>
+                    <a href="#" class="sub-item">Sub Item 2</a>
+                    <a href="#" class="sub-item">Sub Item 3</a>
+                    <a href="#" class="sub-item">Sub Item 4</a>
+                </div>
+
+            </div>
+
+            <!--Option 5-->
+            <div class="item">
+                <a href="#">Option 5</a>
+            </div>
+        </div>
+    </div>
+
+     <!--Overlay-->
+     <div class="overlay"></div>
+    <!--Image Carousel-->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./resources/images/1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./resources/images/2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./resources/images/3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <!--Static Table-->
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                    <th>Heading 4</th>
+                    <th>Heading 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Heading 1">Data 1</td>
+                    <td data-label="Heading 2">Data 2</td>
+                    <td data-label="Heading 3">Data 3</td>
+                    <td data-label="Heading 4">Data 4</td>
+                    <td data-label="Heading 5">Data 5</td>
+                </tr>
+                <tr>
+                    <td data-label="Heading 1">Data 6</td>
+                    <td data-label="Heading 2">Data 7</td>
+                    <td data-label="Heading 3">Data 8</td>
+                    <td data-label="Heading 4">Data 9</td>
+                    <td data-label="Heading 5">Data 10</td>
+                </tr>
+                <tr>
+                    <td data-label="Heading 1">Data 11</td>
+                    <td data-label="Heading 2">Data 12</td>
+                    <td data-label="Heading 3">Data 13</td>
+                    <td data-label="Heading 4">Data 14</td>
+                    <td data-label="Heading 5">Data 15</td>
+                </tr>
+                <tr>
+                    <td data-label="Heading 1">Data 16</td>
+                    <td data-label="Heading 2">Data 17</td>
+                    <td data-label="Heading 3">Data 18</td>
+                    <td data-label="Heading 4">Data 19</td>
+                    <td data-label="Heading 5">Data 20</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Simple Web Design. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
