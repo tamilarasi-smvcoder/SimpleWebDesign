@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="label">User Login</h1>
+
+        <form class="login_form" method="post" action="index.html" name="form" onsubmit="return validated()">
+            <div class="font">Email</div>
+            <input type="email" name="email" autocomplete="off">
+            <div id="email_error">Email Id is Required</div>
+            <div class="font font2">Password</div>
+            <input type="password" name="password">
+            <div id="pass_error">Password is Required</div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="./js/validate.js"></script>
+</body>
+</html>

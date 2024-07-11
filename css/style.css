@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    background-color: #006D5B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menu-btn {
+    position: absolute;
+    font-size: 35px;
+    cursor: pointer;
+    left: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    z-index: 999;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar {
+    background-color: burlywood;
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+    left: -300px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0px;
+}
+
+.sidebar-header {
+    background-color: #deb887;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+.close-btn {
+    position: absolute;
+    font-size: 23px;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    cursor: pointer;
+}
+.sidebar-header h1 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.menu {
+    width: 100%;
+    margin-top: 30px;
+}
+.menu .item {
+    cursor: pointer;
+}
+.menu .item a {
+    color: #156372;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.menu .item a:hover {
+    background-color: #006D5B;
+    color: white;
+}
+.item a .dropdown {
+    margin-left: auto;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+.item .sub-menu {
+    background-color: #B8BA3D;
+    transition: height 0.35s ease-in-out;
+    overflow: hidden;
+}
+.item .sub-menu a {
+    padding-left: 30px;
+}
+.item .sub-menu:not(.active) {
+    display: none;
+}
+.rotate {
+    transform: rotate(90deg);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    /*margin: 0 0 50px;  Adjust margin as needed */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/*Table Design*/
+.table-container{
+    padding:0 10%;
+    margin: 40px 0px 0;
+}
+.table{
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.table thead{
+    background-color: #006D5B;
+}
+.table thead tr th{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #fff;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+}
+.table tbody tr td{
+    font-size:14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    background-color: burlywood;
+    padding: 8px;
+    text-align: center;
+    border:1px solid #dee2e685;
+}
+
+/*Footer*/
+footer{
+    background-color: #006D5B;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+/* Media Query for font size below 390px */
+@media (max-width: 390px) {
+    .header h1 {
+        font-size: 18px; /* Adjust font size as needed */
+    }
+    .header .menu-btn {
+        font-size: 20px; /* Adjust font size as needed */
+    }
+    
+    .menu .item a {
+        font-size: 14px; /* Adjust font size as needed */
+    }
+    
+    .menu .sub-menu .sub-item {
+        font-size: 12px; /* Adjust font size as needed */
+    }
+}
+
+@media(max-width:600px)
+{
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody,.table tr,.table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 5px;
+        
+    }
+    .table tbody tr td{
+        text-align: left;
+        padding-left: 30px;
+        position: relative;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 100px;
+
+    }
+    .table td:before{
+        content: attr(data-label);
+        color: #006D5B;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}
